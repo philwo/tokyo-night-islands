@@ -1,0 +1,20 @@
+<idea-plugin>
+    <id>de.philwo.tokyo-night-islands</id>
+    <name>Tokyo Night Islands</name>
+    <vendor email="philipp@philwo.de">Philipp Wollermann</vendor>
+    <description><![CDATA[
+    Tokyo Night theme for the JetBrains Islands UI.
+    <br/><br/>
+    A child theme of the bundled Islands Dark theme, so it inherits the
+    current platform look (rounded islands, spacing, component styling)
+    and applies the Tokyo Night palette on top. Includes a matching
+    editor color scheme.
+    <br/><br/>
+    Colors are based on Tokyo Night by enkia (VS Code) and the
+    tokyonight.nvim palette by folke.
+    ]]></description>
+    <depends>com.intellij.modules.platform</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <themeProvider id="de.philwo.tokyo-night-islands.night" path="/themes/tokyo-night.theme.json"/>
+    </extensions>
+</idea-plugin>
