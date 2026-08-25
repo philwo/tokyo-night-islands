@@ -14,7 +14,9 @@ repositories {
 
 dependencies {
     intellijPlatform {
-        intellijIdeaCommunity("2025.3")
+        intellijIdeaCommunity("2025.3") {
+            useInstaller = false
+        }
     }
 }
 
