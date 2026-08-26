@@ -16,5 +16,7 @@
     <depends>com.intellij.modules.platform</depends>
     <extensions defaultExtensionNs="com.intellij">
         <themeProvider id="de.philwo.tokyo-night-islands.night" path="/themes/tokyo-night.theme.json"/>
+        <themeProvider id="de.philwo.tokyo-night-islands.storm" path="/themes/tokyo-night-storm.theme.json"/>
+        <themeProvider id="de.philwo.tokyo-night-islands.moon" path="/themes/tokyo-night-moon.theme.json"/>
     </extensions>
 </idea-plugin>

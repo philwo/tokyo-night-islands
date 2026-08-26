@@ -1,13 +1,16 @@
 # Tokyo Night Islands
 
-Tokyo Night (Night variant) for JetBrains IDEs, built as a child theme of
-the bundled Islands Dark theme. The plugin inherits the current platform
-look (rounded islands, spacing, component styling) from Islands Dark and
-applies the Tokyo Night palette on top. It includes a matching editor
-color scheme.
+Tokyo Night for JetBrains IDEs, built as child themes of the bundled
+Islands Dark theme. The plugin inherits the current platform look
+(rounded islands, spacing, component styling) from Islands Dark and
+applies the Tokyo Night palette on top. It ships three variants, each
+with a matching editor color scheme:
 
-Requires a JetBrains IDE 2025.3 or later. Works in all IntelliJ-based
-IDEs, including GoLand.
+- Tokyo Night: the classic Night palette.
+- Tokyo Night Storm: the same accents on lighter blue-grey backgrounds.
+- Tokyo Night Moon: folke's Moon palette with its own accent set.
+
+Requires a JetBrains IDE 2025.3 or later. I personally use and test it in GoLand and JetBrains 2026.2.
 
 ## Build
 
