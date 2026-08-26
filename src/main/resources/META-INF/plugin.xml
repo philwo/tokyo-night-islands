@@ -18,5 +18,6 @@
         <themeProvider id="de.philwo.tokyo-night-islands.night" path="/themes/tokyo-night.theme.json"/>
         <themeProvider id="de.philwo.tokyo-night-islands.storm" path="/themes/tokyo-night-storm.theme.json"/>
         <themeProvider id="de.philwo.tokyo-night-islands.moon" path="/themes/tokyo-night-moon.theme.json"/>
+        <themeProvider id="de.philwo.tokyo-night-islands.day" path="/themes/tokyo-night-day.theme.json"/>
     </extensions>
 </idea-plugin>

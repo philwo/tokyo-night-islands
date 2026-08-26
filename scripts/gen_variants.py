@@ -1,6 +1,6 @@
 import pathlib
 
-root = pathlib.Path.home() / "src/tokyo-night-islands/src/main/resources/themes"
+root = pathlib.Path(__file__).resolve().parent.parent / "src/main/resources/themes"
 
 storm = {
     "101014": "171a28",
@@ -59,6 +59,54 @@ moon = {
     "42465d": "444a73",
 }
 
+day = {
+    "101014": "d0d5e3",
+    "1a1b26": "e1e2e7",
+    "16161e": "d0d5e3",
+    "14141b": "ffffff",
+    "15161e": "b4b5b9",
+    "1e202e": "d5d9e4",
+    "292e42": "c4c8da",
+    "283457": "b7c1e3",
+    "232433": "d2d5e1",
+    "363b54": "a8aecb",
+    "787c99": "68709a",
+    "42465d": "b7c1e3",
+    "c0caf5": "3760bf",
+    "a9b1d6": "6172b0",
+    "565f89": "848cb5",
+    "545c7e": "8990b3",
+    "737aa2": "68709a",
+    "3b4261": "a8aecb",
+    "414868": "a1a6c5",
+    "3d59a1": "7890dd",
+    "394b70": "92a6d5",
+    "7aa2f7": "2e7de9",
+    "2ac3de": "188092",
+    "0db9d7": "07879d",
+    "89ddff": "006a83",
+    "7dcfff": "007197",
+    "bb9af7": "9854f1",
+    "9ece6a": "587539",
+    "73daca": "387068",
+    "e0af68": "8c6c3e",
+    "ff9e64": "b15c00",
+    "f7768e": "f52a65",
+    "db4b4b": "c64343",
+    "ff899d": "ff4774",
+    "9fe044": "5c8524",
+    "faba4a": "a27629",
+    "8db0ff": "358aff",
+    "c7a9ff": "a463ff",
+    "a4daff": "007ea8",
+    "449dab": "4197a4",
+    "6183bb": "506d9c",
+    "914c54": "c47981",
+    "20303b": "b7ced5",
+    "1f2231": "d5d9e4",
+    "37222c": "dababe",
+}
+
 
 def substitute(text, mapping):
     for old, new in mapping.items():
@@ -67,26 +115,46 @@ def substitute(text, mapping):
     return text
 
 
-for suffix, name, mapping in [("storm", "Storm", storm), ("moon", "Moon", moon)]:
-    json_src = (root / "tokyo-night.theme.json").read_text()
-    json_out = substitute(json_src, mapping)
+def moon_fixups(json_out, xml_out):
+    xml_out = xml_out.replace(
+        '<option name="TEXT">\n      <value>\n        <option name="FOREGROUND" value="828bb8"/>',
+        '<option name="TEXT">\n      <value>\n        <option name="FOREGROUND" value="c8d3f5"/>',
+    )
+    return json_out, xml_out
+
+
+def day_fixups(json_out, xml_out):
+    json_out = json_out.replace('"dark": true', '"dark": false')
+    json_out = json_out.replace(
+        '"parentTheme": "Islands Dark"', '"parentTheme": "Islands Light"'
+    )
+    json_out = json_out.replace(
+        '"Button.default.foreground": "fg"', '"Button.default.foreground": "#ffffff"'
+    )
+    xml_out = xml_out.replace('parent_scheme="Darcula"', 'parent_scheme="Default"')
+    return json_out, xml_out
+
+
+variants = [
+    ("storm", "Storm", storm, None),
+    ("moon", "Moon", moon, moon_fixups),
+    ("day", "Day", day, day_fixups),
+]
+
+for suffix, name, mapping, fixups in variants:
+    json_out = substitute((root / "tokyo-night.theme.json").read_text(), mapping)
     json_out = json_out.replace('"name": "Tokyo Night"', f'"name": "Tokyo Night {name}"')
     json_out = json_out.replace(
         '"editorScheme": "/themes/tokyo-night.xml"',
         f'"editorScheme": "/themes/tokyo-night-{suffix}.xml"',
     )
-    (root / f"tokyo-night-{suffix}.theme.json").write_text(json_out)
-
-    xml_src = (root / "tokyo-night.xml").read_text()
-    xml_out = substitute(xml_src, mapping)
+    xml_out = substitute((root / "tokyo-night.xml").read_text(), mapping)
     xml_out = xml_out.replace(
         '<scheme name="Tokyo Night"', f'<scheme name="Tokyo Night {name}"'
     )
-    if suffix == "moon":
-        xml_out = xml_out.replace(
-            '<option name="TEXT">\n      <value>\n        <option name="FOREGROUND" value="828bb8"/>',
-            '<option name="TEXT">\n      <value>\n        <option name="FOREGROUND" value="c8d3f5"/>',
-        )
+    if fixups:
+        json_out, xml_out = fixups(json_out, xml_out)
+    (root / f"tokyo-night-{suffix}.theme.json").write_text(json_out)
     (root / f"tokyo-night-{suffix}.xml").write_text(xml_out)
 
 print("generated")

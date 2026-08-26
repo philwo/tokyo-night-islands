@@ -9,6 +9,7 @@ with a matching editor color scheme:
 - Tokyo Night: the classic Night palette.
 - Tokyo Night Storm: the same accents on lighter blue-grey backgrounds.
 - Tokyo Night Moon: folke's Moon palette with its own accent set.
+- Tokyo Night Day: the light variant, a child of Islands Light.
 
 Requires a JetBrains IDE 2025.3 or later. I personally use and test it in GoLand and JetBrains 2026.2.
 
@@ -46,6 +47,10 @@ installed.
 - The editor scheme relies on `DEFAULT_*` attribute inheritance for
   language-specific keys. Go-specific attributes get tuned after a
   visual pass in GoLand.
+
+## License
+
+Apache License 2.0, see [LICENSE](LICENSE) and [NOTICE](NOTICE).
 
 ## Credits
 
