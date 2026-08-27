@@ -108,6 +108,28 @@ day = {
 }
 
 
+def blend(fg, bg, alpha):
+    f = [int(fg[i : i + 2], 16) for i in (0, 2, 4)]
+    b = [int(bg[i : i + 2], 16) for i in (0, 2, 4)]
+    return "".join(f"{round(b[i] + alpha * (f[i] - b[i])):02x}" for i in range(3))
+
+
+file_tints = [
+    ("e0af68", 0.2),
+    ("9ece6a", 0.2),
+    ("ff9e64", 0.2),
+    ("f7768e", 0.2),
+    ("bb9af7", 0.2),
+    ("7aa2f7", 0.2),
+    ("565f89", 0.3),
+]
+
+for mapping in (storm, moon, day):
+    for accent, alpha in file_tints:
+        night = blend(accent, "1a1b26", alpha)
+        mapping[night] = blend(mapping.get(accent, accent), mapping["1a1b26"], alpha)
+
+
 def substitute(text, mapping):
     for old, new in mapping.items():
         text = text.replace(old, new)

@@ -27,7 +27,14 @@
     "yellow": "#e0af68",
     "orange": "#ff9e64",
     "red": "#f7768e",
-    "red1": "#db4b4b"
+    "red1": "#db4b4b",
+    "fileYellow": "#423933",
+    "fileGreen": "#343f34",
+    "fileOrange": "#483532",
+    "fileRose": "#462d3b",
+    "fileViolet": "#3a3450",
+    "fileBlue": "#2d3650",
+    "fileGray": "#2c2f44"
   },
   "ui": {
     "*": {
@@ -79,6 +86,13 @@
     "ProgressBar.indeterminateEndColor": "blue",
     "Counter.background": "blue0",
     "Counter.foreground": "fg",
+    "FileColor.Yellow": "fileYellow",
+    "FileColor.Green": "fileGreen",
+    "FileColor.Orange": "fileOrange",
+    "FileColor.Rose": "fileRose",
+    "FileColor.Violet": "fileViolet",
+    "FileColor.Blue": "fileBlue",
+    "FileColor.Gray": "fileGray",
     "SearchMatch.startBackground": "blue0",
     "SearchMatch.endBackground": "blue0"
   }
