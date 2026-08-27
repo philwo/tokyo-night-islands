@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check that generated variants are in sync
+        run: |
+          python3 scripts/gen_variants.py
+          git diff --exit-code
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - uses: gradle/actions/setup-gradle@v4
+      - name: Build and check plugin structure
+        run: ./gradlew buildPlugin verifyPluginProjectConfiguration verifyPluginStructure
+      - name: Run IntelliJ Plugin Verifier
+        run: ./gradlew verifyPlugin
+      - uses: actions/upload-artifact@v4
+        with:
+          name: plugin
+          path: build/distributions/*.zip
