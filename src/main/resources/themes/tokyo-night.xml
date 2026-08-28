@@ -31,6 +31,30 @@
     <option name="LINE_NUMBER_ON_CARET_ROW_COLOR" value="787c99"/>
     <option name="METHOD_SEPARATORS_COLOR" value="232433"/>
     <option name="RIGHT_MARGIN_COLOR" value="292e42"/>
+    <option name="ScrollBar.Mac.Transparent.hoverThumbBorderColor" value="737aa28c"/>
+    <option name="ScrollBar.Mac.Transparent.hoverThumbColor" value="737aa28c"/>
+    <option name="ScrollBar.Mac.Transparent.hoverTrackColor" value="737aa21a"/>
+    <option name="ScrollBar.Mac.Transparent.thumbBorderColor" value="737aa259"/>
+    <option name="ScrollBar.Mac.Transparent.thumbColor" value="737aa259"/>
+    <option name="ScrollBar.Mac.Transparent.trackColor" value="737aa200"/>
+    <option name="ScrollBar.Mac.hoverThumbBorderColor" value="737aa28c"/>
+    <option name="ScrollBar.Mac.hoverThumbColor" value="737aa28c"/>
+    <option name="ScrollBar.Mac.hoverTrackColor" value="737aa200"/>
+    <option name="ScrollBar.Mac.thumbBorderColor" value="737aa259"/>
+    <option name="ScrollBar.Mac.thumbColor" value="737aa259"/>
+    <option name="ScrollBar.Mac.trackColor" value="737aa200"/>
+    <option name="ScrollBar.Transparent.hoverThumbBorderColor" value="737aa28c"/>
+    <option name="ScrollBar.Transparent.hoverThumbColor" value="737aa28c"/>
+    <option name="ScrollBar.Transparent.hoverTrackColor" value="737aa21a"/>
+    <option name="ScrollBar.Transparent.thumbBorderColor" value="737aa259"/>
+    <option name="ScrollBar.Transparent.thumbColor" value="737aa259"/>
+    <option name="ScrollBar.Transparent.trackColor" value="737aa200"/>
+    <option name="ScrollBar.hoverThumbBorderColor" value="737aa28c"/>
+    <option name="ScrollBar.hoverThumbColor" value="737aa28c"/>
+    <option name="ScrollBar.hoverTrackColor" value="737aa200"/>
+    <option name="ScrollBar.thumbBorderColor" value="737aa259"/>
+    <option name="ScrollBar.thumbColor" value="737aa259"/>
+    <option name="ScrollBar.trackColor" value="737aa200"/>
     <option name="SELECTION_BACKGROUND" value="283457"/>
     <option name="TEARLINE_COLOR" value="232433"/>
     <option name="SELECTED_TEARLINE_COLOR" value="363b54"/>
