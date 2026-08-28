@@ -3,7 +3,7 @@
     <name>Tokyo Night Islands</name>
     <vendor email="philipp@philwo.de" url="https://philwo.de">Philipp Wollermann</vendor>
     <description><![CDATA[
-    Tokyo Night theme for the JetBrains Islands UI.
+    An unofficial Tokyo Night theme for the JetBrains Islands UI.
     <br/><br/>
     A child theme of the bundled Islands Dark theme, so it inherits the
     current platform look (rounded islands, spacing, component styling)

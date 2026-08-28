@@ -1,10 +1,13 @@
 # Tokyo Night Islands
 
-Tokyo Night for JetBrains IDEs, built as child themes of the bundled
-Islands Dark theme. The plugin inherits the current platform look
-(rounded islands, spacing, component styling) from Islands Dark and
-applies the Tokyo Night palette on top. It ships four variants, each
-with a matching editor color scheme:
+Tokyo Night for JetBrains IDEs, adapted for the new Islands UI. This is
+an unofficial port based on the original Tokyo Night themes.
+
+The plugin builds on the bundled Islands Dark theme through child
+themes. It inherits the current platform look (rounded islands,
+spacing, component styling) from Islands Dark and applies the Tokyo
+Night palette on top. It ships four variants, each with a matching
+editor color scheme:
 
 - Tokyo Night: the classic Night palette.
 - Tokyo Night Storm: the same accents on lighter blue-grey backgrounds.
