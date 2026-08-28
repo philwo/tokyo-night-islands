@@ -56,6 +56,6 @@ Apache License 2.0, see [LICENSE](LICENSE) and [NOTICE](NOTICE).
 ## Credits
 
 Colors are based on [Tokyo Night by
-enkia](https://github.com/enkia/tokyo-night-vscode-theme) and the
+enkia](https://github.com/tokyo-night/tokyo-night-vscode-theme) and the
 [tokyonight.nvim palette by
 folke](https://github.com/folke/tokyonight.nvim).
