@@ -7,6 +7,22 @@
     <option name="CARET_COLOR" value="3760bf"/>
     <option name="CARET_ROW_COLOR" value="d5d9e4"/>
     <option name="CONSOLE_BACKGROUND_KEY" value="e1e2e7"/>
+    <option name="FILESTATUS_ADDED" value="4197a4"/>
+    <option name="FILESTATUS_COPIED" value="4197a4"/>
+    <option name="FILESTATUS_DELETED" value="c47981"/>
+    <option name="FILESTATUS_IDEA_FILESTATUS_DELETED_FROM_FILE_SYSTEM" value="c47981"/>
+    <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="848cb5"/>
+    <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_BOTH_CONFLICTS" value="8c6c3e"/>
+    <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_CONFLICTS" value="8c6c3e"/>
+    <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_PROPERTY_CONFLICTS" value="8c6c3e"/>
+    <option name="FILESTATUS_MERGED" value="9854f1"/>
+    <option name="FILESTATUS_MODIFIED" value="506d9c"/>
+    <option name="FILESTATUS_NOT_CHANGED_IMMEDIATE" value="68709a"/>
+    <option name="FILESTATUS_NOT_CHANGED_RECURSIVE" value="68709a"/>
+    <option name="FILESTATUS_UNKNOWN" value="4197a4"/>
+    <option name="FILESTATUS_addedOutside" value="4197a4"/>
+    <option name="FILESTATUS_changelistConflict" value="8c6c3e"/>
+    <option name="FILESTATUS_modifiedOutside" value="506d9c"/>
     <option name="GUTTER_BACKGROUND" value="e1e2e7"/>
     <option name="INDENT_GUIDE" value="d2d5e1"/>
     <option name="SELECTED_INDENT_GUIDE" value="a8aecb"/>
